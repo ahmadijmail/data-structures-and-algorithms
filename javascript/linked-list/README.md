@@ -8,10 +8,10 @@ Create A link list that contains the following, Linked List class and the class 
 
 
 
+## WhiteBoard
 
-<!-- ## Approach & Efficiency
-I used Big o, with a space O(1)  -->
+1-Append 
 
-
-## API 
-Insert, includes , toString, append, insert before, insert after
+![Append](./imges-WhiteBoard/append.png)
+![InsertAfter](./imges-WhiteBoard/insertafter.png)
+![KthFromend](./imges-WhiteBoard/kthfromend.png)
