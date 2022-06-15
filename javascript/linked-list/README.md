@@ -12,6 +12,10 @@ Create A link list that contains the following, Linked List class and the class 
 
 1-Append 
 
-![Append](./imges-WhiteBoard/append.png)
-![InsertAfter](./imges-WhiteBoard/insertafter.png)
+![Append](./imges-WhiteBoard/append.png) <br>
+
+2- InsertAfter <br>
+![InsertAfter](./imges-WhiteBoard/insertafter.png) <br>
+
+3-KthFromend <br>
 ![KthFromend](./imges-WhiteBoard/kthfromend.png)
