@@ -119,4 +119,38 @@ test('Can successfully insert a node after the last node of the linked list', ()
   expect(list.head.next.next.next.next).toBeNull();
 
 });
+
+test('Where k is greater than the length of the linked list', () => {
+  let list = new LinkedList();
+  list.append('1');
+  list.append('2');
+  list.append('3');
+  expect(list.kthFromEnd(5)).toBe('Exception');
+});
+test('Where k and the length of the list are the same', () => {
+  let list = new LinkedList();
+  list.append('1');
+  list.append('2');
+  list.append('3');
+  expect(list.kthFromEnd(3)).toBe('1');
+});
+test('Where k is not a positive integer', () => {
+  let list = new LinkedList();
+  list.append('a');
+  list.append('b');
+  list.append('c');
+  expect(list.kthFromEnd(-1)).toBe('Exception');
+});
+test('Where the linked list is of a size 1', () => {
+  let list = new LinkedList();
+  list.append('1');
+  expect(list.kthFromEnd(1)).toBe('1');
+});
+test('where k is not at the end, but somewhere in the middle of the linked list', () => {
+  let list = new LinkedList();
+  list.append('1');
+  list.append('2');
+  list.append('3');
+  expect(list.kthFromEnd(2)).toBe('2');
+});
 });

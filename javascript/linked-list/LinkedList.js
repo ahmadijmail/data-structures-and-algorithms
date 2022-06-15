@@ -89,6 +89,26 @@ class LinkedList {
       curr = curr.next;
     }
   }
+  kthFromEnd(k) {
+    let curr = this.head;
+    let count = 0;
+    while (curr) {
+      count++;
+      curr = curr.next;
+    }
+    if (k > count) {
+      return 'Exception';
+    }
+    if (k < 1) {
+      return 'Exception';
+    }
+    curr = this.head;
+    for (let i = 0; i < count - k; i++) {
+      curr = curr.next;
+    }
+    return curr.value;
+  }
+
 }
 
 module.exports = LinkedList;
