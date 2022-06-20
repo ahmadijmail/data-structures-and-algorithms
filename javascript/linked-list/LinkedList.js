@@ -1,9 +1,18 @@
 "use strict";
-const Node = require("./Node");
+
+
+class Node {
+  constructor(value) {
+      this.value = value;
+      this.next = null;
+  }
+  
+}
 
 class LinkedList {
   constructor() {
     this.head = null;
+    this.size=0;
   }
   insert(value) {
     const newNode = new Node(value);
@@ -20,6 +29,27 @@ class LinkedList {
     }
   }
 
+  // reversedlist(list){
+  //   const newLL= new LinkedList()
+  //   const nextNode= null
+  //   const currentNode=null
+  //   const prevNode=null
+  //   if (!list.head) {
+  //     return currentNode;  
+  //   }
+  //   else {
+
+    
+  //   while (currentNode.next){
+  //   currentNode=newLL.head
+  //   const nextNode=newLL.head.next
+
+  //   }
+     
+  //   }
+
+
+  // }
   includes(value) {
     let currNode = this.head;
     while (!this.head) {
@@ -33,17 +63,22 @@ class LinkedList {
     let result = "";
     let currNode = this.head;
     while (currNode) {
-      result = `${result}${currNode.value} -->`;
+      result = (`${result}${currNode.value} -->`);
+      if (currNode.next === null) {
+        result += ' NULL';
+      }
       currNode = currNode.next;
     }
-    console.log(`${result} NULL`);
+    //console.log(`${result} NULL`);
+    return result;
   }
+
+  
 
   append(value) {
     const newNode = new Node(value);
     if (!this.head) {
       this.head = newNode;
-      this.length++;
       return this;
     } else {
       let current = this.head;
@@ -51,7 +86,7 @@ class LinkedList {
         current = current.next;
       }
       current.next = newNode;
-      this.length++;
+      
       return this;
     }
   }
@@ -109,6 +144,43 @@ class LinkedList {
     return curr.value;
   }
 
-}
+  ziplists(list1,list2) {
+    let n1= list1.head
+    let n2=list2.head
+    let newList = new LinkedList(); //empty list
+    if (n1 == null & n1 == null ) {
+      return "Nothing to be ziped man";
+    } else {
+      while (n1 || n2 ){
+        if(n1){
+        newList.insert(n1.value);
+        n1=n1.next
+      }
+      if(n2){
+        newList.insert(n2.value);
+        n2=n2.next
+      }
+    
+    }
 
+    return newList.toString()
+    }
+    
+  }
+
+}
+let ll= new LinkedList();
+let ll2= new LinkedList();
+let testlist= new LinkedList();
+
+// ll.append('1')
+// ll.append('2')
+// ll.append('3')
+// ll2.append('6')
+// ll2.append('7')
+// ll2.append('9')
+// //ll.append(200)
+
+// console.log(testlist.ziplists(ll,ll2));
+//console.log(ll);
 module.exports = LinkedList;
