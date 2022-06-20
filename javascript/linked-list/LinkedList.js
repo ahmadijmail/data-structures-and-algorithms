@@ -156,7 +156,7 @@ class LinkedList {
         newList.insert(n1.value);
         n1=n1.next
       }
-      if(n2){
+       if(n2){
         newList.insert(n2.value);
         n2=n2.next
       }
@@ -169,11 +169,11 @@ class LinkedList {
   }
 
 }
-let ll= new LinkedList();
-let ll2= new LinkedList();
-let testlist= new LinkedList();
+// let ll= new LinkedList();
+// let ll2= new LinkedList();
+// let testlist= new LinkedList();
 
-// ll.append('1')
+// // ll.append('1')
 // ll.append('2')
 // ll.append('3')
 // ll2.append('6')

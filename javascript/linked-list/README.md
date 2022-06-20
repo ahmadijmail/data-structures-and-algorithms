@@ -19,3 +19,6 @@ Create A link list that contains the following, Linked List class and the class 
 
 3-KthFromend <br>
 ![KthFromend](./imges-WhiteBoard/kthfromend.png)
+
+4- Zip
+![Zip](./imges-WhiteBoard/Zip-list.png)
