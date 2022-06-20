@@ -37,15 +37,24 @@ describe('Linked List', () => {
   ll.append(1)
   ll.append(2)
   ll.append(3)
+  ll.append(200)
   ll2.append(6)
   ll2.append(7)
   ll2.append(9)
-  ll.append(200)
   expect(testlist.ziplists(ll,ll2)).toBe('1 -->6 -->2 -->7 -->3 -->9 -->200 --> NULL');
 
  } )
 
+ test("do a zip for if one LL is empty ", ()=>{
+  let ll= new LinkedList();
+  let ll2= new LinkedList();
+  let testlist= new LinkedList();
+  ll.append(1)
+  ll.append(2)
+  ll.append(3)
+  expect(testlist.ziplists(ll,ll2)).toBe('1 -->2 -->3 --> NULL');
 
+ } )
 
 //  test("Can properly insert into the linked list", ()=>{
 //   let list= new LinkedList();
