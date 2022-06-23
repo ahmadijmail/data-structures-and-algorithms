@@ -53,3 +53,16 @@ class Queue {
   }
 }
 module.exports = Queue;
+
+
+let nquee= new Queue
+nquee.enqueue(1)
+nquee.enqueue(2)
+nquee.enqueue(3)
+
+console.log(nquee);
+
+nquee.dequeue(2)
+
+
+console.log(nquee);

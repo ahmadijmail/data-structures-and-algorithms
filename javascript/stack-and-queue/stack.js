@@ -50,3 +50,13 @@ class Stack {
 }
 
 module.exports = Stack;
+
+let nquee= new Stack
+nquee.push(1)
+nquee.push(2)
+nquee.push(3)
+
+console.log(nquee);
+nquee.pop()
+
+console.log(nquee);

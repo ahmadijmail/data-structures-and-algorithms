@@ -1,4 +1,4 @@
-## Challenge
+## Challenge 10
 
 1. Create a stack that can do the following functions: 
 
