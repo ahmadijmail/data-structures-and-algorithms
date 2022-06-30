@@ -1,6 +1,6 @@
 const stack = require("./stack");
 
-function areBracketsBalanced(expr) {
+function CheckBrackets(expr) {
   let nstack = new stack();
 
   for (let i = 0; i < expr.length; i++) {
@@ -8,33 +8,27 @@ function areBracketsBalanced(expr) {
 
     if (x == "(" || x == "[" || x == "{") {
       nstack.push(x);
-      continue;
     }
 
     if (nstack.isEmpty()) return false;
 
     let check;
-    switch (x) {
-      case ")":
-        check = nstack.pop();
-        if (check == "{" || check == "[") return false;
-        break;
 
-      case "}":
-        check = nstack.pop();
-        if (check == "(" || check == "[") return false;
-        break;
-
-      case "]":
-        check = nstack.pop();
-        if (check == "(" || check == "{") return false;
-        break;
+    if (x == ")") {
+      check = nstack.pop();
+      if (check == "{" || check == "[") return false;
+    } else if (x == "}") {
+      check = nstack.pop();
+      if (check == "(" || check == "[") return false;
+    } else if (x == "]") {
+      check = nstack.pop();
+      if (check == "(" || check == "{") return false;
     }
   }
 
   return nstack.isEmpty();
 }
 
-let expr = "";
+//let expr = "{}{Code}[Fellows](())";
 
-console.log(areBracketsBalanced(expr));
+//console.log(CheckBrackets(expr));
