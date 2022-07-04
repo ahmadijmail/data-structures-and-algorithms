@@ -32,3 +32,5 @@ function CheckBrackets(expr) {
 //let expr = "{}{Code}[Fellows](())";
 
 //console.log(CheckBrackets(expr));
+
+module.exports=CheckBrackets
