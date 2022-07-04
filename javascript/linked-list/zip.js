@@ -28,6 +28,8 @@ function ziplists(list1,list2) {
   }
 
 module.exports=ziplists
+
+
 let ll= new LinkedList();
 let ll2= new LinkedList();
 let testlist= new LinkedList();
@@ -41,3 +43,4 @@ ll2.append('9')
 //ll.append(200)
 
 console.log(testlist.ziplists(ll,ll2));
+
