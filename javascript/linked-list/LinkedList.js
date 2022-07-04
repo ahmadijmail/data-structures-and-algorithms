@@ -168,19 +168,57 @@ class LinkedList {
     
   }
 
+
+reverse(LL) {
+  let prev = null;
+  let next = null;
+  let curr = LL.head;
+  let reversedLL = new LinkedList();
+  if (curr ) {
+    while (curr) {
+      next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+    reversedLL.head = prev;
+    return reversedLL;
+  }
+  reversedLL = LL;
+  return reversedLL;
 }
-// let ll= new LinkedList();
-// let ll2= new LinkedList();
-// let testlist= new LinkedList();
 
-// // ll.append('1')
-// ll.append('2')
-// ll.append('3')
-// ll2.append('6')
-// ll2.append('7')
-// ll2.append('9')
-// //ll.append(200)
+isPalindrome(list){
 
-// console.log(testlist.ziplists(ll,ll2));
+
+let reversedList=list.reverse(list);
+let n1=list.head
+let n2=reversedList.head
+ while(n1&&n2){
+  if(n1.value!== n2.value)return false;
+  n1=n1.next;
+  n2=n2.next;
+return true;
+}
+
+}
+
+// while (!this.head) {
+//   if (currNode.value == value) return true;
+//   currNode = currNode.next;
+// }
+// return false;
+//}
+}
+ let ll= new LinkedList();
+ let test= new LinkedList();
+
+ll.append('1')
+ll.append('2')
+ll.append('1')
+ll.append('1')
+
+//console.log(test.reverse(ll));
+ console.log(test.isPalindrome(ll));
 //console.log(ll);
 module.exports = LinkedList;

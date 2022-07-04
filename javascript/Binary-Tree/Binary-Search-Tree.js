@@ -25,9 +25,10 @@ class BinarySearchTree {
   Contains(value) {
     if (!this.root) {
       return false;
-    } else if (this.left == value || this.right == value) {
+    } else if (this.root.left.value == value || this.root.right.value == value) {
       return true;
-    }
+    } else return false
+    
   }
 }
 
@@ -39,5 +40,5 @@ newtree.Add(7);
 newtree.Add(2);
 newtree.Add(3);
 newtree.Add(8);
-
-console.log(newtree.Contains(8));
+console.log(newtree);
+console.log(newtree.Contains(3));
