@@ -1,7 +1,7 @@
 # Data Structures and Algorithms
 
 
-
+[Trees](./javascript/Binary-Tree/) <br> <br>
 [stack-and-queue](./javascript/stack-and-queue/) <br> <br>
 [linked-list-insertions](./javascript/linked-list/) <br> <br>
 [Binary-Search](./array-binary-search/BinarySearchpng.png) <br> <br>
