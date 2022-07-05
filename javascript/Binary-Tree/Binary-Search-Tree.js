@@ -30,6 +30,8 @@ class BinarySearchTree {
     } else return false
     
   }
+
+ 
 }
 
 module.exports = BinarySearchTree;

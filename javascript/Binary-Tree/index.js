@@ -1,5 +1,5 @@
 'use strict';
-const BinaryTree = require('./binary-tree');
+const BinaryTree = require('../Binary-Tree/binary-tree');
 const Node = require('./node');
 
 let tree = null;
@@ -37,3 +37,6 @@ console.log('in order: ', inOrder);
 let postOrder = tree.postOrder();
 console.log('post order: ', postOrder);
 //pre order > 8 , 9 , 7 , 6 , 2 , 4 , 5 , 3 , 1
+
+let x= tree.findMax(tree.root)
+console.log(x);
