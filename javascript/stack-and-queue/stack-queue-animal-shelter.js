@@ -34,26 +34,32 @@ class AnimalShelter {
   }
 
   dequeue(pref) {
-    if (this.isEmpty()) {
+
+      
+     if (this.isEmpty()) {
       return "the queue is empty";
-    } else if (pref == "dog" || pref == "cat") {
+    } 
+    
+    else if (this.front.value == pref) {
       const temp = this.front;
       this.front = this.front.next;
       temp.next = null;
       this.length -= 1;
       return temp.value;
     }
-    return null;
+    else  {
+      return "this shelter is for cats and dogs only";
+    }
+  
   }
+  
 }
 
 let newq = new AnimalShelter();
 newq.enqueue("cat");
-newq.enqueue("dog");
-newq.enqueue("dog");
+// newq.enqueue("dog");
+// newq.enqueue("dog");
 //newq.enqueue("myaoo")
 console.log(newq);
 
-
-
-console.log(newq.dequeue("casfgat"));
+console.log(newq.dequeue("cat"));
