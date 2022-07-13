@@ -38,5 +38,5 @@ let postOrder = tree.postOrder();
 console.log('post order: ', postOrder);
 //pre order > 8 , 9 , 7 , 6 , 2 , 4 , 5 , 3 , 1
 
-let x= tree.findMax(tree.root)
+let x= tree.breadthFirst(tree)
 console.log(x);
