@@ -1,3 +1,5 @@
+const queue = require("../stack-and-queue/queue");
+
 class Node {
   constructor(value) {
     this.value = value;
@@ -10,6 +12,8 @@ class AnimalShelter {
     this.front = null;
     this.rear = null;
     this.length = 0;
+    this.cat = new queue();
+    this.dog = new queue();
   }
   isEmpty() {
     if (this.front === null || this.length === 0) {
@@ -18,48 +22,45 @@ class AnimalShelter {
       return false;
     }
   }
-  enqueue(animal) {
-    const newNode = new Node(animal);
-    if (animal == "dog" || animal == "cat") {
-      if (this.isEmpty()) {
-        this.front = newNode;
-        this.rear = newNode;
-        this.length += 1;
-      } else {
-        this.rear.next = newNode;
-        this.rear = newNode;
-        this.length += 1;
-      }
+  enqueue2(animal) {
+    //const newNode = new Node(animal);
+    if (animal == "dog") {
+      this.dog.enqueue(animal);
+    } else if (animal == "cat") {
+      this.cat.enqueue(animal);
     }
   }
 
   dequeue(pref) {
-
-      
-     if (this.isEmpty()) {
-      return "the queue is empty";
-    } 
-    
-    else if (this.front.value == pref) {
-      const temp = this.front;
-      this.front = this.front.next;
-      temp.next = null;
-      this.length -= 1;
-      return temp.value;
+    if (pref == "cat") {
+      if (this.cat.isEmpty()) {
+        return "No cats";
+      } else if (!this.cat.isEmpty()) {
+        this.cat.dequeue();
+        return pref;
+      }
+    } else if (pref == "dog") {
+      if (this.dog.isEmpty()) {
+        return "No Dogs";
+      } else if (!this.dog.isEmpty()) {
+        this.dog.dequeue();
+        return pref;
+      }
+    } else {
+      return null;
     }
-    else  {
-      return "this shelter is for cats and dogs only";
-    }
-  
   }
-  
 }
 
 let newq = new AnimalShelter();
-newq.enqueue("cat");
-// newq.enqueue("dog");
-// newq.enqueue("dog");
+//newq.enqueue2("cat");
+//newq.enqueue2("cat");
+//newq.enqueue("dog");
+//newq.enqueue("dog");
 //newq.enqueue("myaoo")
-console.log(newq);
+//console.log(newq);
+newq.enqueue2("dog");
+newq.enqueue2("dog");
+//console.log(newq.dequeue("cat"));
 
-console.log(newq.dequeue("cat"));
+// console.log(newq.dequeue("dfds"));
