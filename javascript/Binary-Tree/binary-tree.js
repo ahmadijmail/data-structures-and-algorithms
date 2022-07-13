@@ -46,6 +46,23 @@ class BinaryTree {
     return result;
   }
 
+  breadthFirst() {
+    let list = [this.root];
+    let result = [];
+    while (list.length) {
+      let data = list.shift();
+
+      result.push(data.value);
+
+      //console.log(data);
+      if (data.left) list.push(data.left);
+
+      if (data.right) list.push(data.right);
+    }
+
+    return result;
+  }
+
   //method 1
   findMax() {
     let max = 0;
@@ -53,11 +70,11 @@ class BinaryTree {
       if (root.value > max) {
         max = root.value;
       }
-     // console.log(max);
+      // console.log(max);
       if (root.left) {
         getMax(root.left);
       }
-    //   console.log(max);
+      //   console.log(max);
       if (root.right) {
         getMax(root.right);
       }
