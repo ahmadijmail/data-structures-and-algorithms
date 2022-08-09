@@ -1,6 +1,6 @@
 # Data Structures and Algorithms
 
-
+[Insertion-Sort](./javascript/Insertion-Sort/) <br> <br>
 [Trees](./javascript/Binary-Tree/) <br> <br>
 [stack-and-queue](./javascript/stack-and-queue/) <br> <br>
 [linked-list-insertions](./javascript/linked-list/) <br> <br>
