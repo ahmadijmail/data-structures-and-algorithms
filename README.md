@@ -1,5 +1,10 @@
 # Data Structures and Algorithms
 
+
+[Quick-Sort](./javascript/quicksort/) <br>
+
+[Merge-Sort](./javascript/MergeSort/) <br>
+
 [Insertion-Sort](./javascript/Insertion-Sort/) <br> <br>
 [Trees](./javascript/Binary-Tree/) <br> <br>
 [stack-and-queue](./javascript/stack-and-queue/) <br> <br>
