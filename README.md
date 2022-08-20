@@ -1,6 +1,8 @@
 # Data Structures and Algorithms
 
 
+
+[Hash-Table](./javascript/HashTables/) <br>
 [Quick-Sort](./javascript/quicksort/) <br>
 
 [Merge-Sort](./javascript/MergeSort/) <br>
