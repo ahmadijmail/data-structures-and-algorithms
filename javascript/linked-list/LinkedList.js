@@ -219,6 +219,6 @@ ll.append('1')
 ll.append('1')
 
 //console.log(test.reverse(ll));
- console.log(test.isPalindrome(ll));
+ //console.log(test.isPalindrome(ll));
 //console.log(ll);
 module.exports = LinkedList;
