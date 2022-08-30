@@ -50,6 +50,48 @@ class Hashmap {
     return theIndex;
   }
 
+  hashKeys(hash, value) {
+    let arr = [];
+
+    let key = Object.keys(this.map[hash])[0];
+    arr.push(key);
+
+    let value1 = Object.values(this.map[hash])[0];
+
+    for (let i = 0; i < value1.length; i++) {
+      arr.push(value1[i]);
+    }
+    if (value) {
+      let value2 = Object.values(value)[0];
+      
+      for (let i = 0; i < value2.length; i++) {
+        arr.push(value2[i]);
+      }
+    } else {
+
+
+      arr.push(null);
+    }
+    this.map[hash] = arr;
+  }
+
+  leftJoin(hash1, hash2) {
+
+
+    if (hash1.map.length >= 2) {
+      
+      for (let i = 0; i < hash2.map.length; i++) {
+        if (hash1.map[i]) {
+
+          hash1.hashKeys(i, hash2.map[i]);
+        //  console.log(hash1);
+        }
+      }
+    }
+
+    return hash1;
+  }
+
 
 }
 
