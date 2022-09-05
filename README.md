@@ -1,13 +1,15 @@
 # Data Structures and Algorithms
 
 
+[Graph](./javascript/HashTables/)
 
-[Hash-Table](./javascript/HashTables/) <br>
-[Quick-Sort](./javascript/quicksort/) <br>
+[Hash-Table](./javascript/Graph/)
+<br> <br> 
+[Quick-Sort](./javascript/quicksort/) 
+<br> <br> 
+[Merge-Sort](./javascript/MergeSort/) <br> <br> 
 
-[Merge-Sort](./javascript/MergeSort/) <br>
-
-[Insertion-Sort](./javascript/Insertion-Sort/) <br> <br>
+[Insertion-Sort](./javascript/Insertion-Sort/) <br> <br> 
 [Trees](./javascript/Binary-Tree/) <br> <br>
 [stack-and-queue](./javascript/stack-and-queue/) <br> <br>
 [linked-list-insertions](./javascript/linked-list/) <br> <br>
