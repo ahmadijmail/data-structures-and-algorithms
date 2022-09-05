@@ -1,9 +1,9 @@
 # Data Structures and Algorithms
 
 
-[Graph](./javascript/HashTables/)
+[Graph](./javascript/Graph/)
 
-[Hash-Table](./javascript/Graph/)
+[Hash-Table](./javascript/HashTables/)
 <br> <br> 
 [Quick-Sort](./javascript/quicksort/) 
 <br> <br> 
