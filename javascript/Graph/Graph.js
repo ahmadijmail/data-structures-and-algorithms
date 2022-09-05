@@ -29,9 +29,7 @@ class Graph {
 
     while (queue.length) {
       currentVertex = queue.shift();
-      console.log("Current Vertex  ", currentVertex);
       result.push(currentVertex);
-
       this.adjacencyList[currentVertex].forEach((neighbor) => {
         if (!visited[neighbor]) {
           visited[neighbor] = true;
